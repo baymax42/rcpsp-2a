@@ -231,5 +231,5 @@ operation_id = 0
 file = open('output.txt', w) 
 for dictionary in ended_operations:
     file.write("%d: Start: %f, Koniec: %f, Zasoby: %f, Zlecenie: %d" %
-        ..  (operation_id, dictionary['end'] - dictionary['duration'], dictionary['end'], dictionary['resource'],
+            (operation_id, dictionary['end'] - dictionary['duration'], dictionary['end'], dictionary['resource'],
            dictionary['id']))
