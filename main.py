@@ -227,8 +227,9 @@ while True:
 operation_id = 0
 # Za każde z %d %f wstawiamy odpowiednią wartość po procencie poza cudzysłowiem
 # %d - całkowita liczba
-# %f - zmiennoprzecinkowa (wymierna)
+# %f - zmiennoprzecinkowa (wymierna) 
+file = open('output.txt', 'w') 
 for dictionary in ended_operations:
-    print("%d: Start: %f, Koniec: %f, Zasoby: %f, Zlecenie: %d" %
-          (operation_id, dictionary['end'] - dictionary['duration'], dictionary['end'], dictionary['resource'],
+    file.write("%d: Start: %f, Koniec: %f, Zasoby: %f, Zlecenie: %d" %
+            (operation_id, dictionary['end'] - dictionary['duration'], dictionary['end'], dictionary['resource'],
            dictionary['id']))
